@@ -1,0 +1,210 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: $darker;
+  color: $light;
+  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color ease 200ms;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    position: relative;
+    background-color: $dark;
+    padding: 4rem;
+    border-radius: 3rem;
+    min-width: 52rem;
+
+    .cardLamp {
+      position: absolute;
+      width: 100%;
+      height: 80%;
+      top: 0;
+      left: 0;
+      border-radius: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        background-color: $darker;
+      }
+
+      div:nth-child(1) {
+        width: 2%;
+        height: 15%;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          $mediumLight 0%,
+          $darker 75%,
+          $darker 100%
+        );
+      }
+
+      div:nth-child(2) {
+        margin: -1rem;
+        width: 10%;
+        height: 25%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background: linear-gradient(
+          90deg,
+          $mediumLight 0%,
+          $darker 50%,
+          $darker 100%
+        );
+      }
+
+      div:nth-child(3) {
+        width: 25%;
+        height: 50%;
+        background-color: red;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background: linear-gradient(
+          90deg,
+          $mediumLight 0%,
+          $darker 25%,
+          $darker 100%
+        );
+      }
+    }
+
+    h1 {
+      padding-bottom: 2rem;
+    }
+
+    p {
+      color: $mediumLight;
+      padding-bottom: 1rem;
+    }
+
+    .card-colorPicker {
+      margin-bottom: 2rem;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+
+        li {
+          background-color: $orange;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          cursor: pointer;
+          position: relative;
+        }
+
+        li:hover {
+          opacity: 0.9;
+        }
+
+        li:active {
+          opacity: 0.75;
+        }
+
+        .colorSelected {
+          border: 0.2rem solid $orange;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+          transform: scale(1.3);
+          bottom: 0.03rem;
+          right: 0.003rem;
+        }
+
+        li:nth-child(2) {
+          background-color: $yellow;
+        }
+
+        li:nth-child(3) {
+          background-color: $cyan;
+        }
+
+        li:last-child {
+          background-color: $mediumLight;
+
+          .plus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0.04rem 0 0 0.04rem;
+
+            img {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .card-colorBrightness {
+      .brightnessControl {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: 75%;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          flex-grow: 1;
+        }
+
+        .brightnessSelected {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          flex-grow: 2;
+          width: 100%;
+          height: 0.5rem;
+          background-color: $orange;
+
+          .brightnessSelectedControl {
+            width: 2rem;
+            height: 2rem;
+            background-color: $light;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

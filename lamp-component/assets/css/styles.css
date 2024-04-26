@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #13161e;
+  color: #f0f0f0;
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color ease 200ms;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  position: relative;
+  background-color: #222732;
+  padding: 4rem;
+  border-radius: 3rem;
+  min-width: 52rem;
+}
+main .card .cardLamp {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .card .cardLamp div {
+  background-color: #13161e;
+}
+main .card .cardLamp div:nth-child(1) {
+  width: 2%;
+  height: 15%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #666d80 0%, #13161e 75%, #13161e 100%);
+}
+main .card .cardLamp div:nth-child(2) {
+  margin: -1rem;
+  width: 10%;
+  height: 25%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: linear-gradient(90deg, #666d80 0%, #13161e 50%, #13161e 100%);
+}
+main .card .cardLamp div:nth-child(3) {
+  width: 25%;
+  height: 50%;
+  background-color: red;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: linear-gradient(90deg, #666d80 0%, #13161e 25%, #13161e 100%);
+}
+main .card h1 {
+  padding-bottom: 2rem;
+}
+main .card p {
+  color: #666d80;
+  padding-bottom: 1rem;
+}
+main .card .card-colorPicker {
+  margin-bottom: 2rem;
+}
+main .card .card-colorPicker ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+main .card .card-colorPicker ul li {
+  background-color: #f0921f;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+main .card .card-colorPicker ul li:hover {
+  opacity: 0.9;
+}
+main .card .card-colorPicker ul li:active {
+  opacity: 0.75;
+}
+main .card .card-colorPicker ul .colorSelected {
+  border: 0.2rem solid #f0921f;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(1.3);
+  bottom: 0.03rem;
+  right: 0.003rem;
+}
+main .card .card-colorPicker ul li:nth-child(2) {
+  background-color: #e3ce8e;
+}
+main .card .card-colorPicker ul li:nth-child(3) {
+  background-color: #82e8ff;
+}
+main .card .card-colorPicker ul li:last-child {
+  background-color: #666d80;
+}
+main .card .card-colorPicker ul li:last-child .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0.04rem 0 0 0.04rem;
+}
+main .card .card-colorPicker ul li:last-child .plus img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+main .card .card-colorBrightness .brightnessControl {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 75%;
+}
+main .card .card-colorBrightness .brightnessControl img {
+  width: 2rem;
+  height: 2rem;
+  flex-grow: 1;
+}
+main .card .card-colorBrightness .brightnessControl .brightnessSelected {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-grow: 2;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #f0921f;
+}
+main .card .card-colorBrightness .brightnessControl .brightnessSelected .brightnessSelectedControl {
+  width: 2rem;
+  height: 2rem;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */
