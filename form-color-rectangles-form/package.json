@@ -1,0 +1,15 @@
+{
+  "name": "form-color-rectangles-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch sass/styles.scss assets/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.76.0"
+  }
+}
