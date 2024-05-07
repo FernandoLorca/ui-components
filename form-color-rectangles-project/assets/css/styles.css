@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+/* cutive-mono-latin-400-normal */
+@font-face {
+  font-family: "Cutive Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/cutive-mono@latest/latin-400-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/cutive-mono@latest/latin-400-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #565acd;
+  color: #f8f8f8;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+body main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 90vh;
+  max-width: 90rem;
+  width: 100%;
+}
+body main .rectanglesWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles {
+  display: grid;
+  position: relative;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles:nth-child(1) .rectanglesWrapper__rectangles-rectangle {
+  position: absolute;
+  bottom: 5rem;
+  background-color: #e4d092;
+  width: 75%;
+  height: 100%;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles:nth-child(2) .rectanglesWrapper__rectangles-rectangle {
+  position: absolute;
+  right: 3rem;
+  background-color: #8cd795;
+  width: 75%;
+  height: 110%;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  justify-self: end;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles:nth-child(3) .rectanglesWrapper__rectangles-rectangle {
+  background-color: #f08c87;
+  width: 75%;
+  height: 110%;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  justify-self: end;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles:nth-child(4) .rectanglesWrapper__rectangles-rectangle {
+  position: absolute;
+  top: 15rem;
+  background-color: #cc95dd;
+  width: 75%;
+  height: 120%;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  border-top-left-radius: 10rem;
+  justify-self: end;
+}
+body main .rectanglesWrapper .rectanglesWrapper__rectangles:nth-child(5) .rectanglesWrapper__rectangles-rectangle {
+  position: absolute;
+  top: 7rem;
+  background-color: #81a4e7;
+  width: 75%;
+  height: 100%;
+  border-top-right-radius: 10rem;
+  justify-self: end;
+}
+body main .formWrapper {
+  display: flex;
+  flex-direction: column;
+}
+body main .formWrapper h1 {
+  margin-bottom: 1.5rem;
+}
+body main .formWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body main .formWrapper form label {
+  padding-left: 1rem;
+  margin-bottom: 0.7rem;
+}
+body main .formWrapper form input {
+  background-color: #6e73d4;
+  border: none;
+  height: 4rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  padding-left: 1rem;
+  color: #f8f8f8;
+}
+body main .formWrapper form input:focus {
+  outline: #f8f8f8;
+  border: 3px solid #f8f8f8;
+}
+body main .formWrapper form .form__nameSurname {
+  display: flex;
+  gap: 2rem;
+}
+body main .formWrapper form .form__nameSurname .form__nameSurname--name,
+body main .formWrapper form .form__nameSurname .form__nameSurname--surname {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body main .formWrapper form .form__address,
+body main .formWrapper form .form__email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.7rem;
+}
+body main .formWrapper form .form__button {
+  display: flex;
+  justify-content: end;
+}
+body main .formWrapper form .form__button button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 700;
+  color: #6e73d4;
+  font-size: 2.5rem;
+  border: none;
+  padding: 0.5rem 3rem;
+  border-radius: 1.5rem;
+}
+body main .formWrapper form .form__button button svg {
+  width: 2rem;
+  height: 2rem;
+}
+body main .formWrapper form .form__button button:hover {
+  background-color: #f8f8f8;
+  color: #565acd;
+}
+
+/*# sourceMappingURL=styles.css.map */
