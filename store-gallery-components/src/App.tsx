@@ -1,27 +1,24 @@
 import { ThemeProvider } from './components/theme-provider';
 import { useState, useEffect } from 'react';
 import ProductCard from '@/components/ProductCard';
-
-export interface products {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
+import { products } from '@/types';
 
 export default function App(): JSX.Element {
   const [products, setProducts] = useState<products[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const getProducts = async (url: string): Promise<void> => {
     try {
+      setLoading(true);
       const products = await fetch(url);
       const data = await products.json();
 
       setProducts(data);
     } catch (error) {
       console.error(error);
+      setLoading(false);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -42,6 +39,7 @@ export default function App(): JSX.Element {
               <ProductCard
                 key={product.id}
                 product={product}
+                loading={loading}
               />
             ))}
         </div>
