@@ -52,7 +52,7 @@ export default function CardScenesWrapper() {
             <p className="text-xs text-slate-600">24 devices in use</p>
           </div>
         </div>
-        <div className="rounded-full bg-black text-white inline-block px-5 py-2 text-xs">
+        <div className="rounded-full bg-black text-white inline-block px-5 py-2 text-xs cursor-pointer hover:opacity-75">
           <p className="pt-[1px]">See All</p>
         </div>
       </div>
